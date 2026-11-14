@@ -1,3 +1,50 @@
+# HOW TO RUN THIS AUDIT (operator steps)
+
+AutoClaw is a GUI app, so **you start the run**. Everything else is prepared.
+
+---
+
+## 1. Open
+
+AutoClaw → **Legal Assistant** (GLM-5.3-FlashX-Legal).
+
+## 2. Attach
+
+Exactly the two files in `upload/`, nothing else:
+
+```
+upload/00_MATTER_BRIEF.md
+upload/JOPLIN_PRIVACY_POLICY.md
+```
+
+`PRIVATE_KEY/GROUND_TRUTH.md` is the answer key. It is published so a reader can verify the
+score, but the agent must not see it or the run measures nothing.
+
+## 3. Point it at the code
+
+The audit needs the source, which is far too large to paste. Give AutoClaw the clone:
+
+```
+/tmp/jop
+```
+
+To re-clone at the exact pin instead:
+
+```
+git clone --depth 1 --filter=blob:none --sparse https://github.com/laurent22/joplin.git
+cd jop && git sparse-checkout set packages/lib packages/app-desktop packages/app-mobile packages/app-cli
+git checkout f1b8a6351cdced9a9525b2c4bbe121d4b6c0dc28
+```
+
+## 4. Ask for
+
+The brief already fixes the deliverable table and the allowed verdict/severity words. Add only
+this, verbatim:
+
+> Cite every finding as `file:line` and quote the line. Do not report a host as a live call
+> unless you can show the call site. If you cannot settle a claim from the code in scope, mark it
+> UNVERIFIABLE rather than guessing.
+
 
 ---
 

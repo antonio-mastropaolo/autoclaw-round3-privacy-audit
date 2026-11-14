@@ -33,7 +33,7 @@ which is the right person for the job.
 | `README.md` | This overview. |
 | `matter/00_MATTER_BRIEF.md` | The task: 11 policy claims + the deliverable table + allowed verdict vocabulary. |
 | `matter/JOPLIN_PRIVACY_POLICY.md` | The real policy under test, verbatim, at the pinned commit. |
-| `PRIVATE_KEY/GROUND_TRUTH.md` | Hand-verified answer key. **Never shown to the agent.** |
+| `PRIVATE_KEY/GROUND_TRUTH.md` | Hand-verified answer key, **published on purpose** so you can check the score yourself. The agent never sees it: it is given the Joplin clone and the two files in `upload/`, and nothing else. |
 | `HOW_TO_RUN.md` | Operator steps: what to attach, what to point AutoClaw at, how to score. |
 | `upload/` | Exactly the two files the agent sees. |
 
