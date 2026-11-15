@@ -36,6 +36,7 @@ which is the right person for the job.
 | `PRIVATE_KEY/GROUND_TRUTH.md` | Hand-verified answer key, **published on purpose** so you can check the score yourself. The agent never sees it: it is given the Joplin clone and the two files in `upload/`, and nothing else. |
 | `HOW_TO_RUN.md` | Operator steps: what to attach, what to point AutoClaw at, how to score. |
 | `upload/` | Exactly the two files the agent sees. |
+| `tools/score_run.py` | Mechanical pre-check: which of the 13 key rows have their evidence markers in the run output, and which false-positive traps to read. Not the score itself. |
 
 ---
 
@@ -43,6 +44,7 @@ which is the right person for the job.
 
 - [x] Matter prepared against `laurent22/joplin@f1b8a63`
 - [x] Ground-truth key written from a hand audit of the same commit
+- [x] Key re-verified line by line against the clone **before** the run: 46 citations checked, 7 errors in the first draft fixed and logged in the key's revision log
 - [x] Upload set isolated from the key
 - [ ] AutoClaw run — **operator starts this** (GUI app)
 - [ ] Scoring pass
